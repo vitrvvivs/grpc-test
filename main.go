@@ -27,7 +27,7 @@ func main() {
 	//certPool.AppendCertsFromPEM(certfile)
 	creds := credentials.NewTLS(&tls.Config{
 		//MinVersion: tls.VersionTLS12,
-		//RootCAs: certPool,
+		RootCAs: certPool,
 		//ServerName: "grpc.cobalt.archive.emerald.oasiscloud.io",
 	})
 
