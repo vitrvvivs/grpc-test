@@ -77,4 +77,11 @@ func main() {
 		t := time.Unix(int64(runtimeState.CurrentBlock.Header.Timestamp), 0)
 		fmt.Println("\t", t)
 	}
+
+	chainContext, err := consensusClient.GetChainContext(ctx)
+	if err != nil {
+		fmt.Print("GetChainContext error: ")
+		fmt.Println(err)
+	}
+	fmt.Println("ChainContext: ", chainContext)
 }
